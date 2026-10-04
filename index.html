@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#7fc9f2" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="./icons/icon-180.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="历史之雨" />
+    <title>历史之雨</title>
+    <script type="module" crossorigin src="./assets/index-mjZ3vdEe.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BWo7bRfW.css">
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="game"></canvas>
+
+      <div id="hud" class="hidden">
+        <div class="hud-col">
+          <div class="stat">得分 <span id="score">0</span></div>
+          <div class="stat">
+            连击 <span id="combo">0</span><span id="combo-mult" class="dim"></span>
+          </div>
+        </div>
+        <div class="hud-col right">
+          <div class="stat">最佳 <span id="best">0</span></div>
+          <div class="water" id="water" title="积水：落地 3 滴即结束">
+            <span class="drop"></span><span class="drop"></span><span class="drop"></span>
+          </div>
+        </div>
+      </div>
+
+      <div id="buttons" class="hidden">
+        <button id="btn-true" class="btn btn-true">✓ 对</button>
+        <button id="btn-false" class="btn btn-false">✗ 错</button>
+      </div>
+
+      <button id="btn-mute" class="mute-btn" title="静音">🔊</button>
+
+      <div id="menu" class="overlay">
+        <div class="panel">
+          <h1 class="title">历史之雨</h1>
+          <p class="subtitle">
+            雨滴带着历史判断题落下。<br />
+            点「对 / 错」作答：答对雨滴消失，答错或漏答会积水。<br />
+            积水满 <b>3 格</b>，本局结束。金色雨滴答对可让水位下降。
+          </p>
+          <button id="btn-start" class="btn primary">开始游戏</button>
+          <div class="difficulty">
+            <span class="diff-label">难度</span>
+            <button id="btn-easy" class="diff-btn">简单</button>
+            <button id="btn-hard" class="diff-btn selected">困难</button>
+          </div>
+          <button id="btn-sound-test" class="btn ghost">🔊 声音测试</button>
+          <p id="menu-best" class="dim"></p>
+        </div>
+      </div>
+
+      <div id="gameover" class="overlay hidden">
+        <div class="panel">
+          <h1 class="title">游戏结束</h1>
+          <div id="result" class="result"></div>
+          <button id="btn-again" class="btn primary">再来一局</button>
+          <button id="btn-menu" class="btn ghost">返回主菜单</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

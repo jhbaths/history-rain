@@ -1,0 +1,15 @@
+{
+  "name": "历史之雨",
+  "short_name": "历史之雨",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#7fc9f2",
+  "theme_color": "#7fc9f2",
+  "description": "雨滴带着历史判断题落下，点击对错作答的历史知识快答游戏",
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
